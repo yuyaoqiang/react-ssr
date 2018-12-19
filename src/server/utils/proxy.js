@@ -1,14 +1,15 @@
 const axios = require("axios");
 const qs = require("query-string");
-const baseUrl = "http://cnodejs.org/api/v1";
+const baseUrl = "https://cnodejs.org/api/v1";
+
 module.exports = function(req, res, next) {
   const path = req.path;
   const user = req.session.user || {};
   const needAccessToken = req.query.needAccessToken;
-  if (needAccessToken && user.accessToken) {
+  if (needAccessToken && !user.accessToken) {
     res.status(401).send({
       success: false,
-      data: "nedd login"
+      data: "need login"
     });
   }
   const query = Object.assign({}, req.query);

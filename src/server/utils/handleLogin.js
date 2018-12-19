@@ -1,12 +1,12 @@
 const router = require("express").Router()
 const axios =require("axios");
-const baseUrl = "http://cnodejs.org/api/v1"
+const baseUrl = "https://cnodejs.org/api/v1"
 
 router.post("/login",(req,res,next)=>{
   axios.post(`${baseUrl}/accesstoken`,{
     accesstoken:req.body.accessToken
   }).then(resp=>{
-    if(resp.state ===200 && resp.data.success){
+    if(resp.status ===200 && resp.data.success){
       req.session.user={
         accessToken : req.body.accessToken,
         loginName : resp.data.loginname,

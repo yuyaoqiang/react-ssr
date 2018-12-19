@@ -38,6 +38,9 @@ if(mode){
     publicPath:"/public",
     historyApiFallback:{
       index:"/public/index.html"
+    },
+    proxy:{
+      "/api":"http://localhost:8080"
     }
   }
   config.plugins.push(
