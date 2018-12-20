@@ -14,6 +14,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "art-template": "^4.13.2",
+    "art-template-loader": "^1.4.3",
     "axios": "^0.18.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-es2015-loose": "^8.0.0",
@@ -25,11 +27,13 @@
     "mobx-react": "^5.4.3",
     "query-string": "^6.2.0",
     "react": "^16.6.3",
+    "react-async-bootstrapper": "^2.1.1",
     "react-dom": "^16.6.3",
     "react-mobx": "0.0.4",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "rimraf": "^2.6.2",
+    "serialize-javascript": "^1.5.0",
     "serve-favicon": "^2.5.0",
     "webpack": "^4.27.1",
     "webpack-dev-server": "^3.1.10"

@@ -16,6 +16,10 @@ const config = merge(webpackCommon,{
     new HtmlPlugin({
       filename:"index.html",
       template: path.join(__dirname, "../src/client/template.html")
+    }),
+    new HtmlPlugin({
+      filename:"server.html",
+      template: path.join(__dirname, "../src/client/server.template.html"),
     })
   ]
 });
