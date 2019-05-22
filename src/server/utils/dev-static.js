@@ -42,7 +42,7 @@ serverCompiler.watch({}, (err, stats) => {
   serverBundle = m.exports.default;
   createStoreMap = m.exports.createStoreMap;
 });
-module.exports = function(app) {
+module.exports = function(app)  {
   app.use(
     "/public",
     proxy({
